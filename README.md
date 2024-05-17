@@ -12,4 +12,10 @@ To build, run:
 cargo build
 ```
 
-For circuit keygen and proving commands, see the instructions in the [Rust SDK docs](https://github.com/axiom-crypto/axiom-sdk-rs?tab=readme-ov-file#running-the-circuit).
+For circuit keygen and proving commands, see the instructions in the [Rust SDK docs](https://github.com/axiom-crypto/axiom-sdk-rs?tab=readme-ov-file#running-the-circuit). Note that the sample commands there need to be adjusted for the directory structure of this repo, meaning that you should use:
+
+```
+cargo run -- --input data/input.json -k 12 -p <PROVIDER_URI> <CMD>
+```
+
+where `<CMD>` is `mock`, `prove`, `keygen`, or `run`.
